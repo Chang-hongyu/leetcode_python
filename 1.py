@@ -1,4 +1,10 @@
 # -*- coding:utf-8 -*-
+# Author: Chang-hongyu
+# @Function: 求两个数的索引，使得两个数之和等于target
+# @Version : 1.0"
+# @Contact : 582246340@sjtu.edu.cn"
+
+
 class Solution:
     def twoSum(self, nums, target):
         #用字典来保存键值对
@@ -12,6 +18,7 @@ class Solution:
             d[num] = i
         # 若找不到则返回None
         return None
+
 
 if __name__ == "__main__":
     nums = [2,7,11,15]
