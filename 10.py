@@ -20,13 +20,7 @@ class Solution:
                     dp[j][k] = dp[j - 1][k - 1]
                 if p[k - 1] == "*":
                     # 指前面的字符出现的次数
-                    dp[j][k] = dp[j][k -
-                                     1] or dp[j][k -
-                                                 2] or (dp[j -
-                                                           1][k] and (s[j -
-                                                                        1] == p[k -
-                                                                                2] or p[k -
-                                                                                        2] == '.'))
+                    dp[j][k] = dp[j][k-1] or dp[j][k-2] or (dp[j-1][k] and (s[j-1] == p[k-2] or p[k-2] == '.'))
         return dp[-1][-1]
 
 
