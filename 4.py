@@ -4,6 +4,7 @@
 # @Version : 1.0"
 # @Contact : 582246340@sjtu.edu.cn"
 
+
 class Solution:
     def findMedianSortedArrays(self, nums1: list, nums2: list) -> float:
         m, n = len(nums1), len(nums2)
@@ -41,7 +42,7 @@ class Solution:
 
 
 if __name__ == "__main__":
-    a = [1,2,4,7,8,15,43,56]
-    b = [2,3,7,12,32]
-    ans = Solution().findMedianSortedArrays(a,b)
+    a = [1, 2, 4, 7, 8, 15, 43, 56]
+    b = [2, 3, 7, 12, 32]
+    ans = Solution().findMedianSortedArrays(a, b)
     print(ans)

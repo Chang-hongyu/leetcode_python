@@ -1,8 +1,9 @@
 # -*- coding:utf-8 -*-
 # Author:   Chang-hongyu
-# Function: 
+# Function:
 # Version : 1.0
 # Contact : 582246340@sjtu.edu.cn
+
 
 class Solution:
     def myAtoi(self, str: str) -> int:
@@ -17,7 +18,7 @@ class Solution:
         ans = 0
         for i in new_str:
             if i.isdigit():
-                ans = ans*10 + int(i)
+                ans = ans * 10 + int(i)
             else:
                 break
         ans *= sign
@@ -26,6 +27,7 @@ class Solution:
         if ans < -2147483648:
             return -2147483648
         return ans
+
 
 if __name__ == "__main__":
     s = "-333`1313asdkgad"
