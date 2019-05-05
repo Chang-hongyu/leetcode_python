@@ -10,10 +10,15 @@ class Solution:
         m = len(s)
         # 储存最大长度
         max_len = 0
+        # 储存最长的回文子串
         max_string = ""
+        # 二维数组dp[i][j]==1表示s[i:j+1]为回文子串，初始值均为0
         dp = [[0 for i in range(m)] for j in range(m)]
+
+        # 求以s[j]结尾的最大回文子串
         for j in range(m):
             for i in range(j + 1):
+                # 当差值小于等于1时，首尾相等 则回文
                 if j - i <= 1:
                     if s[i] == s[j]:
                         dp[i][j] = 1
