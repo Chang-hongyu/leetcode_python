@@ -20,10 +20,14 @@ class Solution:
         # 当i为0时，dp[i][j]值为1
         for j in range(n + 1):
             dp[0][j] = 1
+
+        # 以t的长度作为外层循环
         for i in range(m):
             for j in range(n):
+                # 对应位置的元素相同 本行上一个加上dp矩阵左上角元素
                 if s[j] == t[i]:
                     dp[i + 1][j + 1] = dp[i + 1][j] + dp[i][j]
+                # 对应位置的元素不同 在本行找上一个
                 else:
                     dp[i + 1][j + 1] = dp[i + 1][j]
         return dp[-1][-1]
@@ -32,5 +36,7 @@ class Solution:
 if __name__ == "__main__":
     s = "rabbbit"
     t = "rabit"
-    ans = Solution().numDistinct(s, t)
+    s1 = "babgbag"
+    t1 = "bag"
+    ans = Solution().numDistinct(s1, t1)
     print(ans)
